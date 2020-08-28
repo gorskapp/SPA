@@ -1,0 +1,26 @@
+<div class="form-row form-container">
+  <div class="col-9">
+    <div class="card">
+      <div class="card-body center-txt">
+        <h5 class="card-title">{{firstName}} {{lastName}}'s Page</h5>
+        <p><button class="btn btn-success" (click)="checkAge(age)">ACCESS</button></p>
+        <p class="card-text">
+          <ng-container [ngSwitch]="underage">
+            <ng-container *ngSwitchCase="true">
+              <div class="alert alert-danger" role="alert">
+                You by at least 18 years old!
+              </div>
+            </ng-container>
+            <ng-container *ngSwitchCase="false">
+              <img src="https://vege.com.pl/wp-content/uploads/2018/03/h_w.jpg" class="card-img-bottom img" alt="dog_image">
+            </ng-container>
+
+            <ng-container *ngSwitchCase="null">
+            </ng-container>
+          </ng-container>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
